@@ -1,0 +1,12 @@
+<div id="show">
+	<h1>Anagrams for</h1>
+	<h1 class="showword"><%= "#{@word}" %></h1>
+
+	<img class="displayed" src="/img/arrow.png" />
+	
+	<ul class="lists">
+		<% @anagrams.each do |anagram| %>
+			<li><%= "#{anagram}" %></li>
+		<% end %>
+	</ul>
+</div>
