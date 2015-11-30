@@ -4,7 +4,22 @@ body {
 	padding-top: 20px;
 }
 
-.container {
+.error {
+	color: blue;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* p.error:before {
+	font-family: FontAwesome;
+	content: "\f00d";
+	display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+ */.container {
 	width: 406px;
 	max-width: 406px;
 	margin: 0 auto;
