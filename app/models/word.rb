@@ -4,8 +4,8 @@ class Word < ActiveRecord::Base
     # Convert word to an array of letters
     letters = string.split(//)
  
-    # Create an array to store our anagrams
-    anagrams = []
+    # Create an array to store our combinations
+    combinations = []
  
     # Loop through each letter in letters
     letters.each do |letter|
@@ -13,14 +13,22 @@ class Word < ActiveRecord::Base
       remaining = letters.select { |l| l != letter }
  
       # Create a new word by combining the letter + the remaining letters
-      # Add new word to anagrams array
-      anagrams << letter + remaining.join('')
+      # Add new word to combinations array
+      combinations << letter + remaining.join('')
  
       # Create a new word by combining the letter + the reverse of the remaining letters
-      # Add new word to anagrams array
-      anagrams << letter + reverse_letters(remaining).join('')
+      # Add new word to combinations array
+      combinations << letter + reverse_letters(remaining).join('')
     end
  
+		anagrams = []
+		
+		combinations.each do |combo|
+			if Word.find_by_text(combo).present?
+				anagrams << combo
+			end
+		end
+	
     # Return anagrams array
     anagrams
   end
