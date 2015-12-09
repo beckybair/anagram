@@ -4,6 +4,7 @@ get '/words' do
 end
 
 get '/words/new' do
+  @word = Word.new
 	erb :"/words/new"
 end
 
@@ -14,6 +15,18 @@ end
 
 get '/words/:id' do
   @word = Word.find(params[:id])
+  erb :"/words/show"
+end
+
+get '/words/:id/edit' do
+  @word = Word.find(params[:id])
+  erb :"/words/edit"
+end
+
+put '/words/:id' do
+  @word = Word.find(params[:id])
+  @word.text = params[:text]
+  @word.save
   erb :"/words/show"
 end
 
