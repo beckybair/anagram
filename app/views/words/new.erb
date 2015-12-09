@@ -1,4 +1,8 @@
 <div class="container">
-	<h1>Create a Person</h1>
-	<%= erb :"/people/_form" %>
-</div>
+	<h1>Create a Word</h1>
+<form action="/words" method="post">
+  <label for="text">Enter Word:</label>
+  <input type="text" name="text" />
+  
+  <input type="submit" />
+</form></div>
