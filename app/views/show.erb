@@ -5,8 +5,10 @@
 	<img class="displayed" src="/img/arrow.png" />
 	
 	<ul class="lists">
-		<% @anagrams.each do |anagram| %>
-			<li><%= "#{anagram}" %></li>
+		<% if !@anagrams.nil? %>
+			<% @anagrams.each do |anagram| %>
+				<li><%= "#{anagram.text}" %></li>
+			<% end %>
 		<% end %>
 	</ul>
 </div>
