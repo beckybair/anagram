@@ -1,6 +1,6 @@
 body {
 	background: #f8f8f8;
-	background-image: url("/img/tiles-01.png");
+	background-image: url("/img/tiles-02.png");
 	padding-top: 20px;
 }
 
@@ -70,7 +70,7 @@ body {
 
 #start .inputs label {
     color: #fd395e;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     letter-spacing: 1px;
     margin-bottom: 7px;
@@ -88,10 +88,10 @@ input:-moz-placeholder {
 
 #start .inputs input[type=text] {
     background: #f5f5f5;
-    font-size: 0.8rem;
-    -moz-border-radius: 3px;
+    font-size: 14px;
+/*     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+ */    border-radius: 3px;
     border: none;
     padding: 13px 10px;
     width: 330px;
@@ -106,7 +106,7 @@ input:-moz-placeholder {
     outline: none;   
 }
 
-#start .inputs .datepicker {
+/* #start .inputs .datepicker {
     display: block;
     position: static;
     height: 25px;
@@ -120,7 +120,7 @@ input:-moz-placeholder {
     margin-top: 3px;
 }
 
-#start .inputs label.terms {
+ */#start .inputs label.terms {
     float: left;
     font-size: 14px;
     font-style: italic;
@@ -180,10 +180,10 @@ input:-moz-placeholder {
         0px 4px 20px rgba( 0,0,0,0.33 );
     border-radius: 5px;
     display: table;
-    width: 200px;
+    width: 300px;
     height: 200px;
     position: absolute;
-    top:0;
+    top: 20px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -220,4 +220,27 @@ input:-moz-placeholder {
 	font-size: 30px;
 	color: #fd395e;
 	text-transform: uppercase;
+}
+
+#show p {
+  text-align: center;
+  color: #fd395e;
+}
+
+#show-list {
+    padding: 0px 25px 25px;
+    background: #f2f2f2;
+    box-shadow: 
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    border-radius: 5px;
+    display: table;
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }

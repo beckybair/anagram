@@ -1,6 +1,8 @@
-<h1>Words</h1>
-<p>If you don't see a word listed here you can add them <a href="/words/new">here</a>.
-
+<div id="show-list">
+  <h1>Words</h1>
+  <p>If you don't see a word listed here you can add them <a href="/words/new">here</a>.
+  <p>If you want to go back to the beginning, click <a href="/">here</a>.
+  
   <table class="table table-striped">
     <thead>
       <th>Text</th>
@@ -20,10 +22,13 @@
           <td> 
             <form action="<%= "/words/#{word.id}" %>" method="post">
               <input type="hidden" name="_method" value="delete" />
-              <button class="btn btn-danger" type="submit">Delete</button>
+              <button id="btn-delete" class="btn btn-danger" type="submit">
+                <i class="fa fa-exclamation-triangle"></i>Delete
+              </button>
             </form>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
+</div>
